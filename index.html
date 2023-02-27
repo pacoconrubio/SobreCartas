@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <!--
+        Esta pagina es una demo de la idea para la tarjeta (carta) personalizable
+        En esta demo no se valida y por ello se utilizan combobox.
+        Se han restringido algun personalizacion ya que excedia el tiempo para realizar la propuesta 
+        El css esta completo (Los cambios de tamaño no modifican la estructura solo dejan espacio para más letras)
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre cartas</title>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <!--Libreria JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--Canvas-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <!--Js-->
+    <script src="js/card.js"></script>
+    <script src="js/imprimir.js"></script>
+    <!--Css-->
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/input.css">
+</head>
+<body>
+    <div class="body">
+        <!--Header-->
+        <div class="titulo">
+            <h1>SOBRE CARTAS</h1>
+        </div>
+        <!--Section Carta-->
+        <div class="carta">
+            <div class="cartaContainer cC-sm" id="cartaContainer">
+                <div class="headerContainer">
+                    <div class="costeContainer">
+                        <h4 id="costeO" class="coste text co-sm">&nbsp</h4>
+                    </div>
+                    <div class="nombreContainer">
+                        <h4 id="nombreO" class="nombre text n-sm">&nbsp</h4>
+                    </div>
+                    <div class="costeContainer">
+                        <h4 id="costeDescO"class="coste text co-sm">&nbsp</h4>
+                    </div>
+                </div>
+                <div class="fotoContainer fC-sm" id="fotoContainer">
+                    <img id="fotoO" src="#" class="foto f-sm">
+                </div>
+                <div class="subheaderContainer">
+                    <div class="categoriaContainer">
+                        <h4 id="categoriaO" class="categoria text ca-sm">&nbsp</h4>
+                    </div>
+                    <div class="grupoContainer">
+                        <h4 id="grupoO" class="grupo text g-sm">&nbsp</h4>
+                    </div>
+                </div>
+                <div class="bodyContainer">
+                    <div class="textoContainer tC-sm" id="textoContainer">
+                        <h4 id="textoO" class="texto text">&nbsp</h4>
+                    </div>
+                    <div class="citaContainer">
+                        <h5 id="citaO" class="cita text">&nbsp</h5>
+                    </div>
+                    <div class="optionContainer">
+                        <div class="tiempoContainer">
+                            <h4 id="tiempoO" class="tiempo text">&nbsp</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerContainer">
+                    <div class="autorContainer aC-sm" id="autorContainer">
+                        <h6 id="autorO" class="autor text">Autor: </h6>
+                    </div>
+                    <div class="costeContainer">
+                        <h4 id="efectoO" class="coste text co-sm">&nbsp</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Section Label-->
+        <div class="inputLabel">
+            <div class="tamanoI">
+                <label>Tamaño</label>
+            </div>
+            <div class="colorI">
+                <label>Color</label>
+            </div>
+            <div class="costeI">
+                <label>Coste</label>
+            </div>
+            <div class="costeDescI">
+                <label>Coste Descarte</label>
+            </div>
+            <div class="nombreI">
+                <label>Nombre de la carta</label>
+            </div>
+            <div class="imagenI">
+                <label>Imagen</label>
+            </div>
+            <div class="categoriaI">
+                <label>Categoria</label>
+            </div>
+            <div class="grupoI">
+                <label>Grupo</label>
+            </div>
+            <div class="textoI">
+                <label>Texto</label>
+            </div>
+            <div class="citaI">
+                <label>Cita</label>
+            </div>
+            <div class="tiempoI">
+                <label>Tiempo</label>
+            </div>
+            <div class="autorI">
+                <label>Autor</label>
+            </div>
+            <div class="efectoI">
+                <label>Coste de Efecto</label>
+            </div>
+        </div>
+        <!--Section Input-->
+            <div class="input" form="cartaForm">
+                <div class="tamanoI" >
+                    <select name="tamanoI" id="tamanoI">
+                        <option selected>1</option>
+                        <option>1.25</option>
+                        <option>1.5</option>
+                    </select>
+                </div>
+                <div class="colorI" >
+                    <input name="colorI" id="colorI" type="color" value="#7CBD53">
+                </div>
+                <div class="costeI">
+                    <input name="costeI" id="costeI" type="number">
+                </div>
+                <div class="costeDescI" >
+                    <input name="costeDescI" id="costeDescI" type="number">
+                </div>
+                <div class="nombreI">
+                    <input name="nombreI" id="nombreI" type="text">
+                </div>
+                <div class="imagenI">
+                    <input id="imagenI" type="file">
+                </div>
+                <div class="categoriaI">
+                    <select name="categoriaI" id="categoriaI">
+                        <option selected></option>
+                        <option>Presidencia</option>
+                        <option>Literatura</option>
+                        <option>&lt;3</option>
+                    </select>
+                </div>
+                <div class="grupoI">
+                    <input name="grupoI" id="grupoI" type="text">
+                </div>
+                <div class="textoI">
+                    <input name="textoI" id="textoI" type="text">
+                </div>
+                <div class="citaI">
+                    <input name="citaI" id="citaI" type="text">
+                </div>
+                <div class="tiempoI">
+                    <input name="tiempoI" id="tiempoI" type="time" min="00:00" max="15:59">
+                </div>
+                <div class="autorI">
+                    <input name="autorI" id="autorI" type="text">
+                </div>
+                <div class="efectoI">
+                    <input name="efectoI" id="efectoI" type="number">
+                </div>
+            </div>
+        <div class="impbtn">
+            <button id="imprimir">Descargar</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/*
+    Paleta de colores que se usara
+    Color oscuro: #497031
+    Color claro: #CBF2B3
+    Color suave: #9CF069
+    Color sucio: #5E7053
+    Color medio: #7CBD53
+*/
+/*Reglas generales*/
+body{
+    font-family: 'Arvo';
+    background-color: #CBF2B3;
+    min-width: 690px;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+/*Estructurar la pagina en grid:area*/
+.body{
+    display: grid;
+    grid-template-areas: "header header header"
+                        "carta inputLabel input"
+                        "impbtn null addbtn";
+    column-gap: 5px;  
+}
+/*Situar elementos*/
+.carta{
+   grid-area: carta;
+}
+.input{
+    grid-area: input;
+}
+.titulo{
+    grid-area: header;
+}
+.inputLabel{
+    grid-area: inputLabel;
+}
+.addbtn{
+    grid-area: addbtn;
+}
+.impbtn{
+    grid-area: impbtn;
+}
+/*Tamaño de button add*/
+.addbtn{
+    margin-top: 10px;
+}
+/*Centrar contenido*/
+.titulo, .carta, .impbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addbtn, .input{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.inputLabel, .inputLabel div{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}

@@ -1,0 +1,168 @@
+/*
+    Exception en Ratio: textContainer height: 1:90 / 1,25:130 / 1,5:175
+*/
+/*Contenido de una carta*/
+.cartaContainer{
+    background-color: #7CBD53;
+}
+/*Centrar en div*/
+.fotoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Bordear*/
+.autorContainer{
+    border-right: 1px solid;
+    border-right-color: black;
+}
+.nombreContainer{
+    border-right: 1px solid;
+    border-left: 1px solid;
+    
+    border-right-color: black;
+    border-left-color: black;
+}
+.cartaContainer, .fotoContainer, .subheaderContainer, .bodyContainer, .tiempoContainer{
+    border:1px solid;
+    border-radius: 5%;
+    border-color: black;
+}
+/*Alinear en la misma linea*/
+.costeContainer, .nombreContainer, .categoriaContainer, .grupoContainer, .autorContainer{
+    display: inline-flex;
+}
+/*Centrar texto en h*/
+.nombre, .coste,.texto, .cita, .grupo, .tiempo{
+    text-align: center;
+}
+/*Eliminar margen en elementos h*/
+.categoria, .grupo, .nombre, .coste, .texto, .cita, .tiempo, .autor{
+    margin: 0;
+}
+.categoriaContainer,.autorContainer{
+    padding-left: 10px;
+}
+/*
+    Tamaño
+    Ratio: 1
+*/
+.cC-sm{
+    max-width: 200px;
+    max-height: 250px;
+    
+    min-width: 200px;
+    min-height: 250px;
+}
+.tC-sm{
+    max-width: 200px;
+    max-height: 90px;
+    min-width: 200px;
+    min-height: 90px;
+}
+.f-sm{
+    max-width: 200px;
+    max-height: 50px;
+}
+.fC-sm{
+    min-width: 200px;
+    min-height: 50px;
+}
+.co-sm, .n-sm{
+    max-height: 25px;
+    min-height: 25px;
+}
+.co-sm{
+    max-width: 25px;
+    min-width: 25px;
+}
+.g-sm{
+    max-width: 40px;
+    min-width: 40px;
+}
+.n-sm, .ca-sm{
+    max-width: 140px;
+    min-width: 140px;
+}
+.aC-sm{
+    max-width: 160px;
+    min-width:160px;
+}
+/*
+    Tamaño
+    Ratio:1.25
+*/
+.cC-md{
+    max-width: 250px;
+    max-height: 312.5px;
+    
+    min-width: 250px;
+    min-height: 312.5px;
+}
+.tC-md{
+    min-height: 130px;
+}
+.f-md{
+    max-width: 250px;
+    max-height: 62.5px;
+}
+.fC-md{
+    min-width: 250px;
+    min-height: 62.5px;
+}
+.co-md, .n-md{
+    max-height: 31.25px;
+    height: 31.25px;
+}
+.co-md, .g-md{
+    max-width: 31.25px;
+    width: 31.25px;
+}
+.n-md, .ca-md{
+    max-width: 175px;
+    width: 175px;
+}
+.aC-md{
+    width:200px;
+}
+/*
+    Tamaño
+    Ratio: 1,5
+*/
+.cC-lg{
+    max-width: 300px;
+    max-height: 375px;
+    
+    min-width: 300px;
+    min-height: 375px;
+}
+.tC-lg{
+    min-height: 175px;
+}
+.f-lg{
+    max-width: 300px;
+    max-height: 75px;
+}
+.fC-lg{
+    min-width: 300px;
+    min-height: 75px;
+}
+.co-lg, .n-lg{
+    max-height: 37.5px;
+    height: 37.5px;
+}
+.co-lg{
+    max-width: 37.5px;
+    width: 37.5px;
+}
+.g-lg{
+    max-width: 60px;
+    width: 60px;
+}
+.n-lg, .ca-lg{
+    max-width: 210px;
+    width: 210px;
+}
+.aC-lg{
+    width:240px;
+}
